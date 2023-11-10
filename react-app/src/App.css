@@ -1,38 +1,96 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --accent-color: #3ca8f5;
+  --dark-accent-color: #0378cb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app-container {
+  max-width: 1400px; 
+  margin:auto;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff; 
+  color: #333; 
   min-height: 100vh;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 75px; 
+  background-color: var(--accent-color); 
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, var(--dark-accent-color), var(--accent-color));
+}
+
+.navbar-title {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 40px ;
+}
+
+.navbar-menu:hover {
+  color: #ffffff;
+}
+
+.navbar-github {
+  color: #ffffff;
+}
+
+.navbar-github:hover {
+  color: #ffffff;
+}
+
+.navbar-dropdown {
+  position: absolute;
+  top: 79px;
+  left: 2px;
+  background-color: var(--dark-accent-color);
+  width: 250px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-start;
+  padding: 0px 20px;
+  padding-bottom: 50px;
+  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.dropdown-item {
+  margin-top: 50px;
+  color: #333;
+  text-decoration: none;
+  font-size: x-large;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dropdown-item-extra {
+  margin-top: 50px;
+  color: #acacac;
+  text-decoration: none;
+  font-size: large;
+}
+
+.dropdown-item:hover {
+  color: #ffffff;
+}
+
+.dropdown-item-extra:hover {
+  color: #ffffff;
 }
