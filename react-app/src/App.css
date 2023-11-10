@@ -41,56 +41,27 @@ body {
   background: linear-gradient(to right, var(--dark-accent-color), var(--accent-color));
 }
 
-.navbar-title {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 40px ;
-}
-
-.navbar-menu:hover {
-  color: #ffffff;
-}
-
 .navbar-github {
   color: #ffffff;
 }
 
 .navbar-github:hover {
-  color: #ffffff;
+  color: #d6d6d6;
+  transition: .3s;
 }
 
-.navbar-dropdown {
-  position: absolute;
-  top: 79px;
-  left: 2px;
-  background-color: var(--dark-accent-color);
-  width: 250px;
+.home-page-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding: 0px 20px;
-  padding-bottom: 50px;
-  box-shadow: 4px 4px 4px rgba(0,0,0,0.2);
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.dropdown-item {
-  margin-top: 50px;
-  color: #333;
-  text-decoration: none;
-  font-size: x-large;
-}
-
-.dropdown-item-extra {
-  margin-top: 50px;
-  color: #acacac;
-  text-decoration: none;
-  font-size: large;
-}
-
-.dropdown-item:hover {
-  color: #ffffff;
-}
-
-.dropdown-item-extra:hover {
-  color: #ffffff;
+.worldmap-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
