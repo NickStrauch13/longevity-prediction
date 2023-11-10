@@ -1,11 +1,14 @@
 import React from 'react'
+import InteractiveMap from '../components/InteractiveMap';
 
 function WorldMap() {
-  return (
+
+    return (
     <div className='worldmap-page-container'>
-      Map
+        map
+        <InteractiveMap/>
     </div>
-  )
-}
+    )
+    }
 
 export default WorldMap

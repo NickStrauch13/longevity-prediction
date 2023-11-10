@@ -7,8 +7,12 @@ const Navbar = () => {
 
     return (
         <nav className="navbar">
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/worldmap">World Map</NavLink>
+            <div className="navbar-link-container">
+                <NavLink to="/" className="navbar-link-text">Home</NavLink>
+            </div>
+            <div className="navbar-link-container">
+                <NavLink to="/worldmap" className="navbar-link-text">World Map</NavLink>
+            </div>
             <a href="https://github.com/NickStrauch13/longevity-prediction"><AiFillGithub size="35px" className="navbar-github"/></a>
         </nav>
     )
