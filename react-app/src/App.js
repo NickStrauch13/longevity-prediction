@@ -12,7 +12,7 @@ function App() {
     <Navbar />
     <Routes>
       <Route exact path='/' element={<Home />} />
-      <Route exact path='/worldmap' element={<WorldMap />} />
+      <Route path='/worldmap' element={<WorldMap />} />
     </Routes>
   </Router>
   )

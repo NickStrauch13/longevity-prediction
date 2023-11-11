@@ -4,17 +4,21 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps"
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
-function InteractiveMap() {
-    const [hoveredCountry, setHoveredCountry] = useState(null);
+function InteractiveMap({ hoveredCountry, onHover, onClick }) {
   
     const handleMouseEnter = (geo) => {
-      setHoveredCountry(geo.properties.name);
-      console.log("Hovered Country:", geo.properties.name);
+        const countryName = geo.properties.name;
+        onHover(countryName);
     };
   
     const handleMouseLeave = () => {
-      setHoveredCountry(null);
+        onHover(null);
     };
+
+    const handleCountryClick = (geo) => {
+        const countryName = geo.properties.name;
+        onClick(countryName);
+    }
   
     return (
       <ComposableMap>
@@ -24,19 +28,23 @@ function InteractiveMap() {
               <Geography
                 key={geo.rsmKey}
                 geography={geo}
-                onMouseEnter={() => handleMouseEnter(geo)} // Pass the geo object to handleMouseEnter
+                onMouseEnter={() => handleMouseEnter(geo)} 
                 onMouseLeave={handleMouseLeave}
+                onClick={() => handleCountryClick(geo)}
                 style={{
                   default: {
-                    fill: hoveredCountry === geo.properties.name ? "#FF5722" : "#D6D6DA",
+                    fill: hoveredCountry === geo.properties.name ? "#0378cb" : "#D6D6DA",
                     outline: "none",
+                    strokeWidth: 0.2, 
+                    stroke: "#FFFFFF",
+                    transition: "fill 0.2s"
                   },
                   hover: {
-                    fill: "#FF5722",
+                    fill: "#3ca8f5",
                     outline: "none",
                   },
                   pressed: {
-                    fill: "#FF5722",
+                    fill: "#0378cb",
                     outline: "none",
                   },
                 }}
