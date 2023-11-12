@@ -4,7 +4,7 @@ import { ComposableMap, Geographies, Geography } from "react-simple-maps"
 const geoUrl =
   "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-50m.json"
 
-function InteractiveMap({ hoveredCountry, onHover, onClick }) {
+function InteractiveMap({ selectedCountry, onHover, onClick }) {
   
     const handleMouseEnter = (geo) => {
         const countryName = geo.properties.name;
@@ -33,7 +33,7 @@ function InteractiveMap({ hoveredCountry, onHover, onClick }) {
                 onClick={() => handleCountryClick(geo)}
                 style={{
                   default: {
-                    fill: hoveredCountry === geo.properties.name ? "#0378cb" : "#D6D6DA",
+                    fill: selectedCountry === geo.properties.name ? "#0378cb" : "#D6D6DA",
                     outline: "none",
                     strokeWidth: 0.2, 
                     stroke: "#FFFFFF",
@@ -42,11 +42,12 @@ function InteractiveMap({ hoveredCountry, onHover, onClick }) {
                   hover: {
                     fill: "#3ca8f5",
                     outline: "none",
+                    cursor: "pointer"
                   },
                   pressed: {
                     fill: "#0378cb",
                     outline: "none",
-                  },
+                  }
                 }}
               />
             ))

@@ -89,12 +89,51 @@ body {
 
 .worldmap-page-container {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  height: 100vh;
+}
+
+.country-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  flex-grow: 1;
+  background-color: aliceblue;
+  padding: 0;
+  outline: 5px solid var(--grey);
+}
+
+.countrystats-placeholder-text {
+  color: var(--grey);
+  margin-top: 100px;
+  z-index: 2;
+}
+
+.countrystats-selected-text {
+  margin-top: 100px;
+  z-index: 2;
+  text-decoration: underline;
+}
+
+.worldmap-map-and-text-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-top: 0px;
   max-height: 100vh;
+  width: 70%;
   margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
 }
 
 .worldmap-country-text {
@@ -112,6 +151,7 @@ body {
 
 .composable-map {
   margin-bottom: 0px;
+  margin-left: 0px;
   z-index: 1;
 }
 
