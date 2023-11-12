@@ -84,7 +84,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  max-height: 100vh;
 }
 
 .worldmap-page-container {
@@ -92,6 +92,31 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  margin-top: 60px;
+  margin-top: 0px;
+  max-height: 100vh;
+  margin-bottom: 0px;
 }
+
+.worldmap-country-text {
+  margin-top: 100px;
+  margin-bottom: -45px;
+  z-index: 2;
+}
+
+.worldmap-placeholder-text {
+  color: var(--grey);
+  margin-top: 100px;
+  margin-bottom: -45px;
+  z-index: 2;
+}
+
+.composable-map {
+  margin-bottom: 0px;
+  z-index: 1;
+}
+
+.worldmap {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+

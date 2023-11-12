@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { ComposableMap, Geographies, Geography } from "react-simple-maps"
 
 const geoUrl =
@@ -21,7 +21,7 @@ function InteractiveMap({ hoveredCountry, onHover, onClick }) {
     }
   
     return (
-      <ComposableMap>
+      <ComposableMap className="composable-map">
         <Geographies geography={geoUrl}>
           {({ geographies }) =>
             geographies.map((geo) => (

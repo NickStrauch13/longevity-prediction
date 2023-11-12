@@ -16,7 +16,7 @@ function WorldMap() {
 
     return (
     <div className='worldmap-page-container'>
-        <h1>{hoveredCountry}</h1>
+        {hoveredCountry === null ? <h1 className="worldmap-placeholder-text">Select a Country</h1>: <h1 className="worldmap-country-text">{hoveredCountry}</h1>}
         <InteractiveMap 
             className="worldmap"
             hoveredCountry={hoveredCountry} 
