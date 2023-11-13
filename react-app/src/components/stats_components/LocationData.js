@@ -4,7 +4,7 @@ function LocationData({ locationData }) {
     return (
     <div className="location-data-container">
 
-        <h3>Location Specific Factors</h3>
+        <h3>Environmental Factors</h3>
 
         <div className="location-data-positives-and-negatives-container">
             <div className="positive-factors">

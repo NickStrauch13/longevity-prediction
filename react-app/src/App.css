@@ -186,29 +186,38 @@ body {
 }
 
 .location-data-positive-factor-div {
-  outline: 2px solid var(--positive-green);
+  outline: 1px solid var(--positive-green);
   border-radius: 15px;
 }
 
 .location-data-negative-factor-div {
-  outline: 2px solid var(--negative-red);
+  outline: 1px solid var(--negative-red);
   border-radius: 15px;
 }
 
 .location-data-factor-title {
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 17px;
+  font-weight: normal;
   margin: 10px;
   margin-bottom: 0px;
   text-align: center;
 }
 
 .location-data-factor-data {
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
   font-weight: none;
+}
+
+.individual-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  background-color: lightskyblue;
 }
 
 .worldmap-map-and-text-container {
