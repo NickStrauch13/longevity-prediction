@@ -1,10 +1,15 @@
 import React from 'react'
+import LifeExpecNum from './stats_components/LifeExpecNum'
+import LocationData from './stats_components/LocationData'
 
-function CountryStats({ selectedCountry }) {
+function CountryStats({ selectedCountry, selectedCountryData}) {
     return (
     <div className='country-stats-container'>
-        {selectedCountry === null ? <h2 className="countrystats-placeholder-text">Select a Country</h2>: <h2 className="countrystats-selected-text">{selectedCountry}</h2>}
-
+        {selectedCountry === null ? <h1 className="countrystats-placeholder-text">Select a Country</h1>: <h1 className="countrystats-selected-text">{selectedCountry}</h1>}
+        <div className="countrystats-data-container">
+            <LifeExpecNum lifeExpectancy={selectedCountryData.life_expectancy}/>
+            <LocationData locationData={selectedCountryData.location_data}/>
+        </div>
     </div>
     )
 }

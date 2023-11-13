@@ -9,6 +9,10 @@
   --dark-accent-color: #0378cb;
   --white: #ffffff;
   --grey: #d6d6d6;
+  --red: #d62a2a;
+  --green: #03ba03;
+  --positive-green: #51dd55;
+  --negative-red: #f36d61;
 }
 
 .app-container {
@@ -112,15 +116,99 @@ body {
 }
 
 .countrystats-placeholder-text {
+  position: absolute;
+  top: 100px;
   color: var(--grey);
-  margin-top: 100px;
   z-index: 2;
 }
 
 .countrystats-selected-text {
-  margin-top: 100px;
+  position: absolute;
+  top: 100px;
   z-index: 2;
   text-decoration: underline;
+}
+
+.countrystats-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.lifeexpec-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.lifeexpec-number-dot {
+  border-radius: 40px;
+  min-height: 50px;
+  min-width: 50px;
+  z-index: 2;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.location-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.location-data-positives-and-negatives-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  max-width: 85%;
+}
+
+.positive-factors {
+  margin: 0px;
+  margin-bottom: -10px;
+}
+
+.negative-factors {
+  margin: 0px;
+}
+
+.location-data-positive-factor-div {
+  outline: 2px solid var(--positive-green);
+  border-radius: 15px;
+}
+
+.location-data-negative-factor-div {
+  outline: 2px solid var(--negative-red);
+  border-radius: 15px;
+}
+
+.location-data-factor-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.location-data-factor-data {
+  font-size: 15px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: none;
 }
 
 .worldmap-map-and-text-container {
