@@ -4,4 +4,4 @@
 
 ![Alt text](img/readme_header_image.png)
 
-## Using a wide array of features to transparently model expected lifespan
+## Using a wide array of features to transparently model expected lifespan 

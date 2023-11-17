@@ -1,0 +1,259 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent-color: #3ca8f5;
+  --dark-accent-color: #0378cb;
+  --white: #ffffff;
+  --grey: #d6d6d6;
+  --red: #d62a2a;
+  --green: #03ba03;
+  --positive-green: #51dd55;
+  --negative-red: #f36d61;
+}
+
+.app-container {
+  max-width: 1400px; 
+  margin:auto;
+  width: 100%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--white); 
+  color: #333; 
+  min-height: 100vh;
+}
+
+.navbar-container {
+  position: relative;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; 
+  background-color: var(--accent-color); 
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, var(--dark-accent-color), var(--accent-color));
+}
+
+.navbar-github {
+  color: var(--white);
+}
+
+.navbar-github:hover {
+  color: var(--grey);
+  transition: .3s;
+}
+
+.navbar-link-container {
+  width: 100px; 
+  height: 35px; 
+  background-color: var(--white);
+  border-radius: 10px; 
+  transition: background-color 0.3s, transform 0.1s; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.navbar-link-container:hover {
+  background-color: var(--grey); 
+}
+
+.navbar-link-container:active {
+  transform: scale(0.95);
+}
+
+.navbar-link-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-height: 100vh;
+}
+
+.worldmap-page-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  height: 100vh;
+}
+
+.country-stats-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 0px;
+  flex-grow: 1;
+  background-color: aliceblue;
+  padding: 0;
+  outline: 5px solid var(--grey);
+}
+
+.countrystats-placeholder-text {
+  position: absolute;
+  top: 100px;
+  color: var(--grey);
+  z-index: 2;
+}
+
+.countrystats-selected-text {
+  position: absolute;
+  top: 100px;
+  z-index: 2;
+  text-decoration: underline;
+}
+
+.countrystats-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.lifeexpec-number-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.lifeexpec-number-dot {
+  border-radius: 40px;
+  min-height: 50px;
+  min-width: 50px;
+  z-index: 2;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.location-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.location-data-positives-and-negatives-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  max-width: 85%;
+}
+
+.positive-factors {
+  margin: 0px;
+  margin-bottom: -10px;
+}
+
+.negative-factors {
+  margin: 0px;
+}
+
+.location-data-positive-factor-div {
+  outline: 1px solid var(--positive-green);
+  border-radius: 15px;
+}
+
+.location-data-negative-factor-div {
+  outline: 1px solid var(--negative-red);
+  border-radius: 15px;
+}
+
+.location-data-factor-title {
+  font-size: 17px;
+  font-weight: normal;
+  margin: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+.location-data-factor-data {
+  font-size: 14px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-weight: none;
+}
+
+.individual-data-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25px;
+  background-color: lightskyblue;
+}
+
+.worldmap-map-and-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0px;
+  max-height: 100vh;
+  width: 70%;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding: 0;
+}
+
+.worldmap-country-text {
+  margin-top: 100px;
+  margin-bottom: -45px;
+  z-index: 2;
+}
+
+.worldmap-placeholder-text {
+  color: var(--grey);
+  margin-top: 100px;
+  margin-bottom: -45px;
+  z-index: 2;
+}
+
+.composable-map {
+  margin-bottom: 0px;
+  margin-left: 0px;
+  z-index: 1;
+}
+
+.worldmap {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
