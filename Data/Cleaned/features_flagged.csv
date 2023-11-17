@@ -1,0 +1,80 @@
+feature,flag
+"Age at first marriage, female",Red
+"Age at first marriage, male",Red
+Capital health expenditure (% of GDP),Green
+"Cause of death, by communicable diseases and maternal, prenatal and nutrition conditions (% of total)",Red
+"Cause of death, by injury (% of total)",Red
+"Cause of death, by non-communicable diseases (% of total)",Red
+"Community health workers (per 1,000 people)",Green
+"Condom use, population ages 15-24, male (% of males ages 15-24)",Green
+Consumption of iodized salt (% of households),Red
+Current health expenditure (% of GDP),Green
+Births attended by skilled health staff (% of total),Green
+"Contraceptive prevalence, any method (% of all women ages 15-49)",Green
+Current health expenditure per capita (current US$),Green
+Demand for family planning satisfied by any methods (% of married women with demand for family planning),Green
+Diabetes prevalence (% of population ages 20 to 79),Red
+Diarrhea treatment (% of children under 5 receiving oral rehydration and continued feeding),Red
+Exclusive breastfeeding (% of children under 6 months),Green
+Female headed households (% of households with a female head),Green
+"Hospital beds (per 1,000 people)",Green
+"Immunization, BCG (% of one-year-old children)",Green
+"Immunization, DPT (% of children ages 12-23 months)",Green
+"Immunization, HepB3 (% of one-year-old children)",Green
+"Immunization, Hib3 (% of children ages 12-23 months)",Green
+"Immunization, Pol3 (% of one-year-old children)",Green
+"Immunization, measles (% of children ages 12-23 months)",Green
+"Immunization, measles second dose (% of children by the nationally recommended age)",Green
+Domestic private health expenditure per capita (current US$),Green
+Domestic general government health expenditure per capita (current US$),Green
+"Incidence of tuberculosis (per 100,000 people)",Red
+"Literacy rate, adult total (% of people ages 15 and above)",Green
+"Literacy rate, youth total (% of people ages 15-24)",Green
+Malaria cases reported,Red
+"Mortality caused by road traffic injury (per 100,000 people)",Red
+"Mortality from CVD, cancer, diabetes or CRD between exact ages 30 and 70 (%)",Red
+"Mortality rate attributed to household and ambient air pollution (per 100,000 population)",Red
+"Mortality rate attributed to unintentional poisoning (per 100,000 population)",Red
+"Mortality rate attributed to unsafe water, unsafe sanitation and lack of hygiene (per 100,000 population)",Red
+Newborns protected against tetanus (%),Green
+Number of people who are undernourished,Red
+"Nurses and midwives (per 1,000 people)",Green
+People practicing open defecation (% of population),Red
+People using at least basic drinking water services (% of population),Green
+People using at least basic sanitation services (% of population),Green
+People using safely managed drinking water services (% of population),Green
+People using safely managed sanitation services (% of population),Green
+People with basic handwashing facilities including soap and water (% of population),Green
+"('Physicians (per 1,000 people)', 'Poverty headcount ratio at national poverty line (% of population)')",Red
+"Prevalence of HIV, total (% of population ages 15-49)",Red
+Prevalence of current tobacco use (% of adults),Red
+Prevalence of hypertension (% of adults ages 30-79),Red
+Prevalence of overweight (% of adults),Red
+"Public spending on education, total (% of GDP)",Green
+"Prevalence of underweight, weight for age (% of children under 5)",Red
+Prevalence of anemia among women of reproductive age (% of women ages 15-49),Red
+Risk of impoverishing expenditure for surgical care (% of people at risk),Red
+"School enrollment, primary (% gross)",Green
+"Total alcohol consumption per capita (liters of pure alcohol, projected estimates, 15+ years of age)",Red
+"Specialist surgical workforce (per 100,000 population)",Green
+"Suicide mortality rate (per 100,000 population)",Red
+Teenage mothers (% of women ages 15-19 who have had children or are currently pregnant),Red
+"Unemployment, total (% of total labor force)",Red
+Unmet need for contraception (% of married women ages 15-49),Red
+Urban poverty headcount ratio at national poverty lines (% of urban population),Red
+Rural poverty headcount ratio at national poverty lines (% of rural population),Red
+Vitamin A supplementation coverage rate (% of children ages 6-59 months),Green
+power_distance,Red
+individualism,Red
+motivation,Green
+uncertainty_avoidance,Red
+long_term_orientation,Red
+indulgence,Red
+Hepatitis B,Red
+Measles,Red
+BMI,Red
+Diphtheria,Red
+HIV/AIDS,Red
+Polio,Red
+Schooling,Green
+Alcohol,Red
