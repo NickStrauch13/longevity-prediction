@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import InteractiveMap from '../components/InteractiveMap';
 import CountryStats from '../components/CountryStats';
+import { AiOutlinePicture } from 'react-icons/ai';
 
 function WorldMap() {
 

@@ -5,7 +5,7 @@ function IndividualData() {
     <div className='individual-data-container'>
 
         <h3>Individual Choices</h3>
-
+            
 
     </div>
     )
