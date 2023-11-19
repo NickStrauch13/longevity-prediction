@@ -6,6 +6,7 @@
 
 :root {
   --accent-color: #3ca8f5;
+  --light-accent-color: #6ec0ff;
   --dark-accent-color: #0378cb;
   --white: #ffffff;
   --grey: #d6d6d6;
@@ -45,6 +46,7 @@ body {
   padding: 0 40px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   background: linear-gradient(to right, var(--dark-accent-color), var(--accent-color));
+  z-index: 100;
 }
 
 .navbar-github {
@@ -113,18 +115,30 @@ body {
   background-color: aliceblue;
   padding: 0;
   outline: 5px solid var(--grey);
+  overflow-y: auto; 
+  scrollbar-color: transparent transparent;
+}
+
+.country-stats-container::-webkit-scrollbar {
+  width: 0.1em;
+}
+
+.country-stats-container::-webkit-scrollbar-thumb {
+  background-color: transparent;
 }
 
 .countrystats-placeholder-text {
-  position: absolute;
-  top: 100px;
+  /*position: absolute;
+  top: 100px;*/
+  margin-top: 200px;
   color: var(--grey);
   z-index: 2;
 }
 
 .countrystats-selected-text {
-  position: absolute;
-  top: 100px;
+  /*position: absolute;
+  top: 100px;*/
+  margin-top: 200px;
   z-index: 2;
   text-decoration: underline;
 }
@@ -164,38 +178,32 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 25px;
+  margin-top: 40px;
 }
 
-.location-data-positives-and-negatives-container {
+.all_top-features-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 0px;
-  max-width: 85%;
+  margin-top: 25px;
+  margin-bottom: 25px;
 }
 
-.positive-factors {
-  margin: 0px;
-  margin-bottom: -10px;
+.location-data-single-feature-container {
+  background-color: var(--light-accent-color);
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
 }
 
-.negative-factors {
-  margin: 0px;
+.location-data-single-feature-container:hover {
+  background-color: var(--accent-color); 
+  cursor: pointer;
 }
 
-.location-data-positive-factor-div {
-  outline: 1px solid var(--positive-green);
-  border-radius: 15px;
-}
-
-.location-data-negative-factor-div {
-  outline: 1px solid var(--negative-red);
-  border-radius: 15px;
-}
-
-.location-data-factor-title {
+.location-data-feature-title {
   font-size: 17px;
   font-weight: normal;
   margin: 10px;
@@ -203,21 +211,13 @@ body {
   text-align: center;
 }
 
-.location-data-factor-data {
+.location-data-feature-data {
   font-size: 14px;
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
   font-weight: none;
-}
-
-.individual-data-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-top: 25px;
-  background-color: lightskyblue;
+  text-align: center;
 }
 
 .worldmap-map-and-text-container {

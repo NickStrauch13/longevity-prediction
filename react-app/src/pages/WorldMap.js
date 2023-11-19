@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import InteractiveMap from '../components/InteractiveMap';
 import CountryStats from '../components/CountryStats';
+import handleGetCountryData from '../apis/country_data';
 import { AiOutlinePicture } from 'react-icons/ai';
 
 function WorldMap() {
@@ -8,36 +9,63 @@ function WorldMap() {
     const [hoveredCountry, setHoveredCountry] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     //const [selectedCountryData, setSelectedCountryData] = useState(null);
-    const [selectedCountryData, setSelectedCountryData] = useState({"life_expectancy": 81,
-                                                                    "location_data": {
-                                                                        "positives": [
-                                                                            {
-                                                                                "title": "Happiness",
-                                                                                "data": "The happiness score of the country is 6.5",
-                                                                            },
-                                                                            {
-                                                                                "title": "GDP per Catpita",
-                                                                                "data": "The GDP per capita of the country is $40,000",
-                                                                            }
-                                                                        ],
-                                                                        "negatives": [
-                                                                            {
-                                                                                "title": "Access to Healthcare",
-                                                                                "data": "The country has a score of 0.5 for access to healthcare",
-                                                                            }
+    const [selectedCountryData, setSelectedCountryData] = useState(
+                                                                    {
+                                                                        "life_expectancy": 77.9,
+                                                                        "top_features": [
+                                                                        {
+                                                                            "feature": "Even societal power distribution",
+                                                                            "percentile": 2.6,
+                                                                            "std_devs": -1.946
+                                                                        },
+                                                                        {
+                                                                            "feature": "Literacy rate, adult total",
+                                                                            "percentile": 96.0,
+                                                                            "std_devs": 1.755
+                                                                        },
+                                                                        {
+                                                                            "feature": "Positivity",
+                                                                            "percentile": 95.6,
+                                                                            "std_devs": 1.71
+                                                                        },
+                                                                        {
+                                                                            "feature": "Immunization, BCG",
+                                                                            "percentile": 95.6,
+                                                                            "std_devs": 1.703
+                                                                        },
+                                                                        {
+                                                                            "feature": "Adversion to uncertainty",
+                                                                            "percentile": 7.1,
+                                                                            "std_devs": -1.466
+                                                                        },
+                                                                        {
+                                                                            "feature": "Motivation",
+                                                                            "percentile": 92.8,
+                                                                            "std_devs": 1.464
+                                                                        },
+                                                                        {
+                                                                            "feature": "Individualism",
+                                                                            "percentile": 91.0,
+                                                                            "std_devs": 1.343
+                                                                        },
+                                                                        {
+                                                                            "feature": "Newborns protected against tetanus",
+                                                                            "percentile": 84.3,
+                                                                            "std_devs": 1.006
+                                                                        }
                                                                         ]
                                                                     }
-                                                                });
+                                                                );
 
     const handleHoveredCountry = (country) => {
         setHoveredCountry(country);
     }
 
     const handleCountryClick = (clickedCountry) => {
-        // TODO
         setSelectedCountry(clickedCountry);
+        handleGetCountryData(clickedCountry, setSelectedCountryData);
         console.log('API request for:', clickedCountry);
-      };
+      };    
 
     return (
     <div className='worldmap-page-container'>
