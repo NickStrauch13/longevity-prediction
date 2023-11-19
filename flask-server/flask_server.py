@@ -25,10 +25,13 @@ def get_country_data_route():
     top_country_features = format_percentiles(top_country_features)
     # Format response
     response = {
+        'headers': {
+            "Access-Control-Allow-Origin": "*"
+        },
         'life_expectancy': life_expectancy,
         'top_features': top_country_features
     }
-    return response
+    return jsonify(response)
     
 
 
