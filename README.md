@@ -1,5 +1,3 @@
-[![Build Status](https://github.com/NickStrauch13/longevity-prediction/actions/workflows/python-ci.yml/badge.svg)](https://github.com/NickStrauch13/longevity-prediction/actions)
-
 # Longevity Prediction Tool
 [Vist our site!](https://global-longevity-insights-706bdfb27940.herokuapp.com/)
 
@@ -73,5 +71,18 @@ If you wish to launch this project locally, follow the steps below:
 │   │   |   ├── index.js
 │   ├── package.json
 │   ├── package-lock.json
+├── notebooks
+│   ├── data_exploration.ipynb
+│   ├── data_preprocessing.ipynb
+│   ├── feature_engineering.ipynb
+│   ├── modeling.ipynb
+├── Data
+│   ├── country_conversion.json
+│   ├── country_life_expectancy.csv
+│   ├── Cleaned
+│   │   ├── cultural_df.csv
+│   │   ├── features_flagged.csv
+│   │   ├── longevity_reduced.csv
+│   │   ├── longevity.csv
 ├── .gitignore
 ├── requirements.txt
