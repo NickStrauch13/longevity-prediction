@@ -23,6 +23,7 @@ If you wish to launch this project locally, follow the steps below:
 1. Clone the repository to your local machine.
 2. Install Python and Node.js if not already installed.
 3. Create a Python virtual environment 
+   - This project runs on Python `3.9.12`, and guaranteed support for newer versions is coming soon.
    - Initalize environment with: `python -m venv venv`
    - Download dependencies with: `pip install -r requirements.txt`
    - Activate environment with: `source venv/bin/activate` (mac) or `venv\Scripts\activate` (windows)
