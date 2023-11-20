@@ -13,7 +13,7 @@ def load_data() -> pd.DataFrame:
     # Load the data
     file_path = '../data/Cleaned/longevity_reduced.csv'
     data = pd.read_csv(file_path)
-    data.drop(columns=["Measles", "Polio", "Literacy rate, youth total", "Prevalence of HIV"], inplace=True)
+    data.drop(columns=["Measles", "Polio", "Literacy rate, youth total", "Prevalence of HIV", "Immunization, measles second dose"], inplace=True)
 
     # Select columns to normalize
     columns_to_normalize = [col for col in data.columns if col not in ['Country Name', 'Life expectancy at birth, total (years)']]
