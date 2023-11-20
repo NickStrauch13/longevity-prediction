@@ -15,7 +15,17 @@ The Life Expectancy Prediction Model is a data-driven project designed to analyz
 -`User Interaction`: Future updates will introduce a user-friendly interface allowing users to modify a country's feature values. The model will dynamically update predictions, showcasing the potential impact of changes in specific features on life expectancy.
 
 ## Data Sources
+1. World Bank (CSV)​
 
+       https://databank.worldbank.org/source/world-development-indicatorshttps://databank.worldbank.org/source/world-development-indicators   ​
+
+2. Kaggle (CSV) ​
+
+       https://www.kaggle.com/code/himanshukumar7079/life-expectancy-eda-pred#Loading-Data ​
+
+3. The Culture Factor (Web Scraping)​
+
+        https://www.hofstede-insights.com/country-comparison-tool
 
 ## How to Launch Locally
 If you wish to launch this project locally, follow the steps below:
