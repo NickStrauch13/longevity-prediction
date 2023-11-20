@@ -1,7 +1,13 @@
 # Longevity Prediction Tool
-[Vist our site!](https://global-longevity-insights-706bdfb27940.herokuapp.com/)
+<p align="center" style="font-size: 18px;">
+  <a href="https://global-longevity-insights-706bdfb27940.herokuapp.com/" style="text-decoration: none; color: #0366d6;">
+    Visit our site!
+  </a>
+</p>
 
-![Alt text](img/readme_header_image.png)
+<p align="center">
+  <img src="img/readme_header_image.png" alt="Alt text" width="400"/>
+</p>
 
 ## Overview
 The Life Expectancy Prediction Model is a data-driven project designed to analyze and predict life expectancy for individuals in specific countries based on a wide array of features. Unlike traditional models that focus solely on prediction accuracy, our model stands out by emphasizing the interpretability of feature importance. The primary goal is to empower users with insights into the key drivers influencing life expectancy in a given country.
