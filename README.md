@@ -27,6 +27,9 @@ The Life Expectancy Prediction Model is a data-driven project designed to analyz
 
         https://www.hofstede-insights.com/country-comparison-tool
 
+4.  MySql to store some of the data (SQL Database)
+
+
 ## How to Launch Locally
 If you wish to launch this project locally, follow the steps below:
 
