@@ -1,6 +1,7 @@
 from flask import Flask, abort, jsonify, request
 from flask_cors import CORS, cross_origin
 import pandas as pd
+import json
 from predict_life_expectancy import predict_new_life_expectancy, get_country_data
 from format_percentiles import format_percentiles
 from load_data import load_data
@@ -10,12 +11,14 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 DF = load_data()
+COUNTRY_NORMALIZATION = json.load(open('../Data/country_conversion.json', 'r'))
 
 
 @app.route('/get_country_data', methods=['GET'])
 @cross_origin()
 def get_country_data_route():
     country_name = request.args.get('country')
+    country_name = COUNTRY_NORMALIZATION[country_name]
     life_expectancy, top_country_features = get_country_data(DF, country_name)
     # Clean life expectancy float
     life_expectancy = round(life_expectancy, 1)

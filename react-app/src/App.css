@@ -193,6 +193,7 @@ body {
 
 .location-data-single-feature-container {
   width: 100%;
+  max-width: 100%;
   margin-bottom: 10px;
   border-radius: 25px;
   border: 1px solid var(--light-accent-color);
@@ -202,6 +203,7 @@ body {
 .location-data-single-feature-container:hover {
   background-color: var(--light-accent-color); 
   cursor: pointer;
+  transform: scale(1.05);
 }
 
 .location-data-feature-title {
