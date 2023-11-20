@@ -50,6 +50,13 @@ body {
   z-index: 100;
 }
 
+.navbar-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--white);
+}
+
 .navbar-github {
   color: var(--white);
 }
@@ -130,9 +137,9 @@ body {
 }
 
 .countrystats-placeholder-text {
-  /*position: absolute;
-  top: 100px;*/
-  margin-top: 200px;
+  position: relative;
+  top: -250px;
+  /*margin-top: 200px;*/
   color: var(--grey);
   z-index: 2;
 }
@@ -162,8 +169,8 @@ body {
 
 .lifeexpec-number-dot {
   border-radius: 40px;
-  min-height: 50px;
-  min-width: 50px;
+  min-height: 55px;
+  min-width: 55px;
   z-index: 2;
   margin-top: 10px;
   display: flex;
@@ -204,6 +211,11 @@ body {
   background-color: var(--light-accent-color); 
   cursor: pointer;
   transform: scale(1.05);
+}
+
+.location-data-single-feature-container:active {
+  background-color: var(--dark-accent-color);
+  transform: scaleX(1.04); 
 }
 
 .location-data-feature-title {
@@ -250,7 +262,7 @@ body {
 }
 
 .composable-map {
-  margin-bottom: 0px;
+  margin-bottom: -50px;
   margin-left: 0px;
   z-index: 1;
 }
@@ -260,3 +272,23 @@ body {
   margin-bottom: 0px;
 }
 
+.toggle-button {
+  border: 1px solid var(--light-accent-color);
+  background-color: transparent;
+  color: var(--accent-color);
+  padding: 12px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;  
+  margin-bottom: 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  z-index: 3;
+}
+
+.toggle-button:hover {
+  background-color: var(--light-accent-color); 
+  color: var(--white);
+}

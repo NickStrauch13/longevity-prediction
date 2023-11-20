@@ -8,54 +8,8 @@ function WorldMap() {
 
     const [hoveredCountry, setHoveredCountry] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
-    //const [selectedCountryData, setSelectedCountryData] = useState(null);
-    const [selectedCountryData, setSelectedCountryData] = useState(
-                                                                    {
-                                                                        "life_expectancy": 77.9,
-                                                                        "top_features": [
-                                                                        {
-                                                                            "feature": "Even societal power distribution",
-                                                                            "percentile": 2.6,
-                                                                            "std_devs": -1.946
-                                                                        },
-                                                                        {
-                                                                            "feature": "Literacy rate, adult total",
-                                                                            "percentile": 96.0,
-                                                                            "std_devs": 1.755
-                                                                        },
-                                                                        {
-                                                                            "feature": "Positivity",
-                                                                            "percentile": 95.6,
-                                                                            "std_devs": 1.71
-                                                                        },
-                                                                        {
-                                                                            "feature": "Immunization, BCG",
-                                                                            "percentile": 95.6,
-                                                                            "std_devs": 1.703
-                                                                        },
-                                                                        {
-                                                                            "feature": "Adversion to uncertainty",
-                                                                            "percentile": 7.1,
-                                                                            "std_devs": -1.466
-                                                                        },
-                                                                        {
-                                                                            "feature": "Motivation",
-                                                                            "percentile": 92.8,
-                                                                            "std_devs": 1.464
-                                                                        },
-                                                                        {
-                                                                            "feature": "Individualism",
-                                                                            "percentile": 91.0,
-                                                                            "std_devs": 1.343
-                                                                        },
-                                                                        {
-                                                                            "feature": "Newborns protected against tetanus",
-                                                                            "percentile": 84.3,
-                                                                            "std_devs": 1.006
-                                                                        }
-                                                                        ]
-                                                                    }
-                                                                );
+    const [selectedCountryData, setSelectedCountryData] = useState(null);
+    const [colorOverlay, setColorOverlay] = useState(true);
 
     const handleHoveredCountry = (country) => {
         setHoveredCountry(country);
@@ -64,8 +18,11 @@ function WorldMap() {
     const handleCountryClick = (clickedCountry) => {
         setSelectedCountry(clickedCountry);
         handleGetCountryData(clickedCountry, setSelectedCountryData);
-        console.log('API request for:', clickedCountry);
-      };    
+    };   
+    
+    const handleColorOverlayToggle = () => {
+        setColorOverlay(!colorOverlay);
+    }
 
     return (
     <div className='worldmap-page-container'>
@@ -79,7 +36,11 @@ function WorldMap() {
                 selectedCountry={selectedCountry}
                 onHover={handleHoveredCountry} 
                 onClick={handleCountryClick}
+                colorOverlay={colorOverlay}
             />
+            <button className='toggle-button' onClick={handleColorOverlayToggle}>
+                Toggle Color Overlay
+            </button>
         </div>
         
     </div>
