@@ -9,7 +9,7 @@ function WorldMap() {
     const [hoveredCountry, setHoveredCountry] = useState(null);
     const [selectedCountry, setSelectedCountry] = useState(null);
     const [selectedCountryData, setSelectedCountryData] = useState(null);
-    const [colorOverlay, setColorOverlay] = useState(true);
+    const [colorOverlay, setColorOverlay] = useState(false);
 
     const handleHoveredCountry = (country) => {
         setHoveredCountry(country);

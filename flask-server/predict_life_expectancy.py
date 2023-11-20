@@ -37,8 +37,40 @@ def get_country_data(df: pd.DataFrame, country_name: str, n: int = 8) -> Tuple[f
 
     top_z_scores = sorted_z_scores.head(n)
 
-    return life_expect, top_z_scores
+    # Isolate the top features for the country using the zscores and the model importances
+    ret_best_zscores = crossover_feature_importances(top_z_scores)
 
+    return life_expect, ret_best_zscores
+
+
+def crossover_feature_importances(top_z_scores: pd.Series) -> pd.Series:
+    """
+    Utlize the feature importances from the model and z-scores to idolate the most influential 
+    features for a single country.
+
+    Args:
+        top_z_scores (pd.Series): Series containing the top z-scores for a country
+
+    Returns:
+        pd.DataFrame: Series containing the top features for a country
+    """
+    try:
+        top_feats_curr_rf = MODEL.feature_importances_[top_z_scores.index]
+        curr_b_features = top_z_scores.copy()
+        top_feats_indexed = pd.Series(top_feats_curr_rf, index=top_z_scores.index)
+        top_feats_i = top_feats_indexed.sort_values(ascending=False)
+        for isolated_feature in top_feats_i.index:
+            top_feats_i[isolated_feature] = top_feats_i[isolated_feature] / top_feats_curr_rf.sum()
+            top_feats_i[isolated_feature] = top_feats_i[isolated_feature] * top_z_scores[isolated_feature]
+            if top_feats_i[isolated_feature] < 0 and isolated_feature != 'Life expectancy at birth, total (years)' and isinstance(isolated_feature, float):
+                curr_b_features[isolated_feature] = top_feats_i[isolated_feature]
+                top_feats_i[isolated_feature] = 0
+        top_feats_rel = top_feats_i.sort_values(ascending=True)
+        top_feats_rel = top_feats_rel[top_feats_rel > top_feats_indexed.mean()]
+        return curr_b_features
+    except:
+        # Country with no overlap
+        return top_z_scores
 
 
 def predict_new_life_expectancy(input_data: pd.DataFrame) -> float :
