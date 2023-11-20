@@ -55,3 +55,4 @@ def predict_new_life_expectancy(input_data: pd.DataFrame) -> float :
     pred_life_expectancy = MODEL.predict(input_data)
 
     return pred_life_expectancy[0]
+        
