@@ -6,7 +6,7 @@
 </p>
 
 <p align="center">
-  <img src="img/readme_header_image.png" alt="Alt text" width="400"/>
+  <img src="img/readme_header_image.png" alt="Alt text" width="600"/>
 </p>
 
 ## Overview
