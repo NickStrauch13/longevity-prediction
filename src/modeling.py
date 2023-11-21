@@ -81,13 +81,13 @@ def predict_life_expectancy(country_name):
     '''
     file_path = '../data/Cleaned/longevity_reduced.csv'
     data = pd.read_csv(file_path)
+    data_copy = data.copy()
     target = 'Life expectancy at birth, total (years)'
     # Find the row in the dataframe that corresponds to the given country
-    country_data = data[data['Country Name'] == country_name].drop(
+    country_data = data_copy[data_copy['Country Name'] == country_name].drop(
         columns=[target, 'Country Name'])
     # load the model
-    rf_model = load_pickled_model()
-    life_expectancy = rf_model.predict(country_data)
+    life_expectancy = data[data['Country Name'] == country_name][target].values[0]
     top_z_score_features = find_top_z_score_features(data, target, country_name)
     top_rf_features = rf_feature_importance(country_data)
     

@@ -92,10 +92,13 @@ If you wish to launch this project locally, follow the steps below:
 │   ├── package.json
 │   ├── package-lock.json
 ├── notebooks
-│   ├── data_exploration.ipynb
-│   ├── data_preprocessing.ipynb
-│   ├── feature_engineering.ipynb
-│   ├── modeling.ipynb
+│   ├── data_visualization.ipynb
+|   ├── modeling.ipynb
+│   ├── preprocessing.ipynb
+├── src
+|   ├── main.py
+|   ├── modeling.py
+│   ├── util.py
 ├── Data
 │   ├── country_conversion.json
 │   ├── country_life_expectancy.csv
