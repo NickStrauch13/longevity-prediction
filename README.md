@@ -95,10 +95,6 @@ If you wish to launch this project locally, follow the steps below:
 │   ├── data_visualization.ipynb
 |   ├── modeling.ipynb
 │   ├── preprocessing.ipynb
-├── src
-|   ├── main.py
-|   ├── modeling.py
-│   ├── util.py
 ├── Data
 │   ├── country_conversion.json
 │   ├── country_life_expectancy.csv
