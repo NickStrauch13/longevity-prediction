@@ -1,7 +1,5 @@
-import requests
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
 from fuzzywuzzy import process
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestRegressor
@@ -11,12 +9,25 @@ from sklearn.preprocessing import MinMaxScaler
 import mysql.connector
 from mysql.connector import Error
 import joblib
-import matplotlib.pyplot as plt
-from util import fetch_data_from_db
+from util import fetch_data_from_db, web_scraper
+import requests
+import pickle
 
 
-def source_data():
-    data = fetch_data_from_db("longevity.LONGEVITY")
+def source_data(table_name, web_scraper_url):
+    '''
+    This function fetches data from the MySQL database and returns it as a Pandas DataFrame.
+    '''
+    data = fetch_data_from_db(table_name)
+    return data
+
+def preprocess_data():
+    web_scraper_url = 'https://www.hofstede-insights.com/country-comparison-tool'
+    mysql_table_name = 'longevity.LONGEVITY'
+    scraped_data = web_scraper(web_scraper_url)
+    # save scraped data to csv
+    scraped_data.to_csv('../data/cleaned/culture_df.csv')
+    data = fetch_data_from_db(mysql_table_name)
     return data
 
 
@@ -74,8 +85,9 @@ def predict_life_expectancy(country_name):
     # Find the row in the dataframe that corresponds to the given country
     country_data = data[data['Country Name'] == country_name].drop(
         columns=[target, 'Country Name'])
-
-    life_expectancy = country_data[target]
+    # load the model
+    rf_model = load_pickled_model()
+    life_expectancy = rf_model.predict(country_data)
     top_z_score_features = find_top_z_score_features(data, target, country_name)
     top_rf_features = rf_feature_importance(country_data)
     
@@ -174,11 +186,14 @@ def save_pickled_model(model):
     '''
     This function saves the model as a pickle file.
     '''
-    joblib.dump(model, '../models/rf_model.joblib')
+    with open('../models/rf_model.pkl', 'wb') as f:
+        pickle.dump(model, f)
+
 
 def load_pickled_model():
     '''
     This function loads the pickle file and returns the model.
     '''
-    model = joblib.load('../models/rf_model.joblib')
+    with open('../models/rf_model.pkl', 'rb') as f:
+        model = pickle.load(f)
     return model
